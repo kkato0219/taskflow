@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+          <h1>TaskFlow</h1>
+          <button id="theme-toggle">🌙</button>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Add a task...">
+
+            <input type="date" id="due-date">
+
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button id="add-btn">Add</button>
+        </div>
+
+        <div class="filters">
+            <button data-filter="all">All</button>
+            <button data-filter="active">Active</button>
+            <button data-filter="completed">Completed</button>
+        </div>
+
+        <button id="clear-completed">Clear Completed</button>
+
+        <p id="task-count"></p>
+
+        <div class="board">
+
+            <div class="column" data-status="todo">
+                <h3>Todo</h3>
+                <ul class="task-list"></ul>
+            </div>
+
+            <div class="column" data-status="doing">
+                <h3>Doing</h3>
+                <ul class="task-list"></ul>
+            </div>
+
+            <div class="column" data-status="done">
+                <h3>Done</h3>
+                <ul class="task-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
